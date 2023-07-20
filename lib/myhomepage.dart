@@ -18,9 +18,23 @@ class _MyHomePageState extends State<MyHomePage> {
           isLightMode == true ? AppTheme.white : AppTheme.nearlyBlack,
         body: Column(
           children: <Widget>[
+            SizedBox(
+                width:screenSize.width,
+                height:screenSize.height*0.02,
+                child:Container(
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlueAccent,
+                    border: new Border.all(width: 2,color: Colors.lightBlueAccent),
+                  ),
+                ),
+            ),
             Container(
                 height: screenSize.height/10,
                 width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.lightBlueAccent,
+                  border: new Border.all(width: 2,color: Colors.lightBlueAccent),
+                ),
                 child: Row(
                     children:<Widget>[
                       SizedBox(width:screenSize.width*0.01),
@@ -48,12 +62,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
             ),
             Container(
-                height: screenSize.height/8,
+                height: screenSize.height/10,
                 width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.lightBlueAccent,
+                ),
                 child: Row(
                   children:[
+                    SizedBox(width:screenSize.width*0.04),
                     Container(
-                      width: screenSize.width/2,
+                      width: screenSize.width*0.45,
                       child: new GestureDetector(
                         onTap: () {
                           print("------onTap1");
@@ -61,15 +79,29 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.blue,
+                            color: Colors.indigo,
                           ),
                           child:Row(
                             children: [
                               Icon(Icons.memory),
                               Column(
                                 children: [
-                                  Text('智能选志愿',),
-                                  Text('输入分数一键选志愿',),
+                                  Text(
+                                      '智能选志愿',
+                                      style : TextStyle(
+                                          color: Colors.white,
+                                          fontSize:30,
+                                          fontWeight: FontWeight.w500
+                                      )
+                                  ),
+                                  Text(
+                                      '输入分数一键选志愿',
+                                      style : TextStyle(
+                                          color: Colors.white,
+                                          fontSize:15,
+                                          fontWeight: FontWeight.w500
+                                      )
+                                  ),
                                 ],
                               ),
                             ],
@@ -77,8 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
+                    SizedBox(width:screenSize.width*0.02),
                     Container(
-                      width: screenSize.width/2,
+                      width: screenSize.width*0.45,
                       child: new GestureDetector(
                         onTap: () {
                           print("------onTap1");
@@ -86,15 +119,29 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.blue,
+                            color: Colors.indigo,
                           ),
                           child:Row(
                             children: [
                               Icon(Icons.content_paste),
                               Column(
                                 children: [
-                                  Text('新建志愿表',),
-                                  Text('定制多种报考方案',),
+                                  Text(
+                                      '新建志愿表',
+                                      style : TextStyle(
+                                          color: Colors.white,
+                                          fontSize:30,
+                                          fontWeight: FontWeight.w500
+                                      )
+                                  ),
+                                  Text(
+                                      '定制多种报考方案',
+                                      style : TextStyle(
+                                          color: Colors.white,
+                                          fontSize:15,
+                                          fontWeight: FontWeight.w500
+                                      )
+                                  ),
                                 ],
                               ),
                             ],
@@ -102,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
+                    SizedBox(width:screenSize.width*0.04),
                   ],
                 ),
             ),
@@ -199,85 +247,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                 ),
-                /*child: Row(
-                    children:<Widget>[
-                      Expanded(
-                        child:Column(
-                            children:<Widget>[
-                              Expanded(
-                                child:IconButton(
-                                  icon: Icon(Icons.business),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child:Text("查大学"),
-                              ),
-                            ]
-                        ),
-                      ),
-                      Expanded(
-                        child:Column(
-                            children:<Widget>[
-                              Expanded(
-                                child:IconButton(
-                                  icon: Icon(Icons.book),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child:Text("查专业"),
-                              ),
-                            ]
-                        ),
-                      ),
-                      Expanded(
-                        child:Column(
-                            children:<Widget>[
-                              Expanded(
-                                child:IconButton(
-                                  icon: Icon(Icons.video_library),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child:Text("同分去向"),
-                              ),
-                            ]
-                        ),
-                      ),
-                      Expanded(
-                        child:Column(
-                            children:<Widget>[
-                              Expanded(
-                                child:IconButton(
-                                  icon: Icon(Icons.assignment),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child:Text("一分一段表"),
-                              ),
-                            ]
-                        ),
-                      ),
-                      Expanded(
-                        child:Column(
-                            children:<Widget>[
-                              Expanded(
-                                child:IconButton(
-                                  icon: Icon(Icons.laptop),
-                                  onPressed: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child:Text("省控线"),
-                              ),
-                            ]
-                        ),
-                      ),
-                    ]
-                )*/
             ),
           ],
         )
